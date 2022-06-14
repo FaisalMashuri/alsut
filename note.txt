@@ -1,0 +1,124 @@
+// isCheckpoint(lat1,lng1,lat2,lng2): any {
+    isCheckpoint(lat1, lng1, lat2, lng2): boolean {
+
+        var R = 6371; // Radius of the earth in km
+        var dLat = this.deg2rad(lat2 - lat1);  // deg2rad below
+        var dLon = this.deg2rad(lng2 - lng1);
+        var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(this.deg2rad(lat1)) * Math.cos(this.deg2rad(lat2)) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        var d = R * c; // Distance in km
+        d = d * 1000 // on meter
+        var tempString: string;
+        this.distance = d.toString();
+        // return d;
+        if (d < this.settings.radiusCheckpoint) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    deg2rad(deg): number {
+        return deg * (Math.PI / 180)
+    }
+
+
+let stillErrorCo = [];
+        let sMqtt = await this.storage.get('mqtt').then((dataMqttLocalStorage) => {
+            this.sendLog("read dataMqttLocalStorage", dataMqttLocalStorage);
+            if(dataMqttLocalStorage != null && dataMqttLocalStorage != '') {
+                let i = 0;
+                dataMqttLocalStorage.forEach(item => {
+                    i++;
+                    if(item.lat == "" || item.long =="") {
+                        this.sendDebug('GPS failed lat long empty');
+                    } else {
+                        this.sendLog('sending cache mqtt ' + i, item);
+                        this.MQTTsend('v1/api/cluster', item);
+                    }
+                });
+                
+            }
+        });
+
+        this.storage.remove('mqtt');
+        this.storage.set('mqtt', stillErrorCo);
+        
+        
+        let sCheckpoint = await this.storage.get('checkpoint').then((dataCheckpointLocalStorage) => {
+            this.sendLog("read dataCheckpointLocalStorage", dataCheckpointLocalStorage);
+            stillErrorCo = [];
+            if(dataCheckpointLocalStorage != null && dataCheckpointLocalStorage != '') {
+                let i = 0;
+                dataCheckpointLocalStorage.forEach(item => {
+                    i++;
+                    this.sendLog('sending cache checkpoint ' + i, item);
+
+                    var link = this.host + '/checkpoint/progress';
+                    var myData = JSON.stringify(item);
+                    this.http.post(link, myData, { headers: { 'Content-Type': 'application/json' } }).subscribe(result => {
+                        let dataObject: any;
+                        dataObject = result;
+                        this.sendLog('sending data checkpoint from local storage success', myData);
+                        this.mqttStatus = true;
+
+                    }, error => {
+                        this.sendLog('sending data checkpoint from local storage failed', myData);
+                        stillErrorCo.push(myData);
+                    });
+                });
+            }
+        });
+
+        this.storage.remove('checkpoint');
+        this.storage.set('checkpoint', stillErrorCo);
+
+        let sDebug = await this.storage.get('debug').then((dataDebugLocalStorage) => {
+            this.sendLog("read dataDebugLocalStorage", dataDebugLocalStorage);
+            stillErrorCo = [];
+            if(dataDebugLocalStorage != null && dataDebugLocalStorage != '') {
+                let i = 0;
+                dataDebugLocalStorage.forEach(item => {
+                    i++;
+                    this.sendLog('sending cache checkpoint ' + i, item);
+                    var link = this.host + '/debug';
+                    var myData = JSON.stringify(item);
+                    this.http.post(link, myData, { headers: { 'Content-Type': 'application/json' } }).subscribe(result => {
+                        this.sendLog('send data debug from local storage success', myData);
+                    }, error => {
+                        this.sendLog('send data debug from local failed', myData);
+                        stillErrorCo.push(myData);
+                    });
+                });
+            }
+            
+            
+        
+        });
+
+        this.storage.remove('debug');
+        this.storage.set('debug', stillErrorCo);
+
+
+        
+            this.pulseClock = setInterval(() => {
+                this.nowDate = moment().format('YYYY-MM-DD h:mm:ss'); 
+            }, 1000);
+
+
+
+
+
+    async readFileLog() {
+        this.promise = this.file.readAsText(this.file.externalDataDirectory, this.fileLogs);
+        await this.promise.then(value => {
+            this.sendLog("Isi file log \n" + value);
+        });
+    }
+
+    
+
+    fileLogsExist() {
+        this.file.checkDir(this.file.externalDataDirectory, this.fileLogs).then(_ => {}
+        ).catch(err =>{});
+    }

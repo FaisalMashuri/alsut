@@ -1,0 +1,7 @@
+{
+  "name": "guardtour",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

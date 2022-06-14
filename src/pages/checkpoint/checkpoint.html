@@ -1,0 +1,32 @@
+<ion-content  class="azwar">
+    <iframe [src]="mapUrl" height="300" style="width: 100%"></iframe>
+    <ion-card class="frame-body">
+        <div class="row">
+            <ion-item>
+                <ion-label>Tanggal/Jam <ion-icon name="ios-clock-outline"></ion-icon></ion-label>
+                <ion-label>{{datecaptionstart}}</ion-label>
+            </ion-item>
+        </div>
+    
+        <div class="row">
+            <div style="display: flex;justify-content: center; width: 100%" id="section01">
+                <div class="child" style="scrollbar-color: blue;width:300px;padding-right:30px;margin: 0 auto; overflow-y: auto; height: 240px">
+
+                    <div class="row" style="padding: 5px 0" *ngFor="let item of checkpointData; let i = index;" >
+                        <label style="color: #000; margin: 0">{{ item.description }}</label>
+                        <label style="padding-left: 10px; margin: 0">
+                            <span *ngIf="userCheckpoint.indexOf(i) <= -1" class="not-check-point"> </span>
+                            <span *ngIf="userCheckpoint.indexOf(i) >= 0" class="checked-point"> </span>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </ion-card>
+    <div style="text-align: center; width: 100%; margin-top: 5px;">
+        <button (click)="stop()" class="btn-checkpoint">Stop</button>
+        <button (click)="report()" class="btn-checkpoint">Report</button>
+    </div>
+
+</ion-content>

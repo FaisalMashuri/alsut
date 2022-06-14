@@ -1,0 +1,31 @@
+<div class="frame">
+    <header text-center>
+        <h2>Guard Tour</h2>
+    </header>
+    <div class="inner-box">
+        <div class="row">
+            <label>User Name</label>
+            <label>{{ userName }}</label>
+        </div>
+        <div class="row">
+            <label>Schedule Date</label>
+            <label>{{ scheduleDate }}</label>
+        </div>
+        <div class="row">
+            <label>Start Patrol</label>
+            <label>{{ startPatrol }}</label>
+        </div>
+        <div class="row">
+            <label>End Patrol</label>
+            <label>{{ endPatrol }}</label>
+        </div>
+        <div class="row">
+            <label>Status</label>
+            <label>{{ status }}</label>
+        </div>
+    </div>
+    <div class="btn-box">   
+        <button ion-button (click)="logout()" class="btn full outline logout">Logout</button>
+        <button ion-button (click)="report()" class="btn start full outline">Report</button>
+    </div>
+</div>
