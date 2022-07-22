@@ -1,0 +1,119 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+// @font-face {
+//     font-family: 'logic';
+//     src: url('#{$font-path}/logic/logic.ttf') format('truetype');
+
+// }
+// @font-face {
+//     font-family: "digital";
+//     src: url('#{$font-path}/digital/digital.ttf') format('truetype');
+
+// }
+@font-face {
+    font-family: 'forgotten';
+    src: url('#{$font-path}/forgotten/forgotten.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'neuropol';
+    src: url('#{$font-path}/neuropol/neuropol.ttf') format('truetype');
+}
+
+header {
+	margin-bottom: 30px;
+    font-family: logic;
+}
+
+.frame {
+    // background-color: #c5c5c3;
+    border: groove 2px #aeb0aa;
+    padding: 3px;
+    // background-image: url('../assets/imgs/bg.png');
+    min-height: 500px;
+    height: 100%;
+}
+
+.inner-box {
+    margin: 10px;
+    // border: groove 2px #dfdfdb;
+    padding: 6px;
+}
+
+.input-style {
+    margin: 0 auto;
+
+}
+
+.input-box {
+    background-color: #f5f5f3;
+    height: 60px;
+    width: 100%;
+    padding: 5px;
+    font-size: 40px;
+    margin-top: 6px;
+}
+
+header h2 {
+    margin-top: 20px;
+    color: #000 !important;
+    // color: #f5f5f3 !important;
+    text-transform: uppercase;
+    font-size: 50px;
+    text-shadow: 3px 3px #f5f5f3;
+    // text-shadow: 2px 2px #000;
+}
+
+.btn {
+  -webkit-box-shadow: 3px 4px 0px #666666;
+  -moz-box-shadow: 3px 4px 0px #666666;
+  box-shadow: 3px 4px 0px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #999c9e;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn-box {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.swal2-popup .swal2-content {
+	font-size: 2.125em !important;
+}
+
+.btn {
+	height: 50px !important;
+}
+
+.footer {
+    // position: absolute;
+    // bottom: 0;
+    margin-top: 15px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: #757373;
+    text-shadow: 1px 1px #f5f5f3;
+}
+
+.copyright {
+    display: block;
+}

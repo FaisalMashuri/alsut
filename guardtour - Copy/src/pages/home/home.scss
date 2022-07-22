@@ -1,0 +1,82 @@
+page-home {
+    .body {
+        background-color: #cfd1d6;
+    }
+
+    .top-head{
+        height: 60px;
+        background-color: #161e3d;
+        color: #fff;
+        padding:10px;
+        text-align: left;
+    }
+    .top-head span {
+        // padding-top: 15px;
+        font-size: 26px;
+    }
+
+    .btn-back {
+        background-color: #161e3d;
+    }
+
+    .frame-home {
+        margin-top: 50px;
+    }
+
+    h2 {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .btn-box {
+        margin-top: 50px;
+    }
+
+    .btn-submit {
+        color: #fff;
+        width: 280px;
+        background-color: #161e3d;
+        border-radius: 25px;
+        height: 50px;
+        font-size: 26px;
+    }
+
+    .inner-box {
+        color: #000;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        background-color: #fff;
+        font-size: 20px;
+        height: 240px;
+    }
+
+    label {
+        display: inline-block;
+        width: 50%;
+        margin:  10px 0;
+        color: #000;
+    }
+
+    .item-input .label-md, .item-select .label-md, .item-datetime .label-md {
+        color: #000;
+    }
+
+    .ion-select {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        overflow: hidden;
+        max-width: 75%;
+    }
+
+    ion-select {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        overflow: hidden;
+        max-width: 75%;
+    }
+
+}

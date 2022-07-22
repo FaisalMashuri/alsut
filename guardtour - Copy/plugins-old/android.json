@@ -1,0 +1,73 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "azwarazuhri.guardtour.alsut.msg"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "azwarazuhri.guardtour.alsut.msg"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "azwarazuhri.guardtour.alsut.msg"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "azwarazuhri.guardtour.alsut.msg"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "azwarazuhri.guardtour.alsut.msg"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "azwarazuhri.guardtour.alsut.msg"
+    },
+    "cordova-plugin-background-mode": {
+      "PACKAGE_NAME": "azwarazuhri.guardtour.alsut.msg"
+    },
+    "cordova-plugin-local-notification": {
+      "PACKAGE_NAME": "azwarazuhri.guardtour.alsut.msg"
+    },
+    "cordova-plugin-request-location-accuracy": {
+      "PACKAGE_NAME": "azwarazuhri.guardtour.alsut.msg"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "azwarazuhri.guardtour.alsut.msg"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "azwarazuhri.guardtour.alsut.msg"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "azwarazuhri.guardtour.alsut.msg"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "azwarazuhri.guardtour.alsut.msg"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "azwarazuhri.guardtour.alsut.msg"
+    },
+    "cordova-plugin-ios-camera-permissions": {
+      "PACKAGE_NAME": "azwarazuhri.guardtour.alsut.msg"
+    },
+    "cordova-plugin-nativeaudio": {
+      "PACKAGE_NAME": "azwarazuhri.guardtour.alsut.msg"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "azwarazuhri.guardtour.alsut.msg"
+    },
+    "cordova-plugin-cleartext": {
+      "PACKAGE_NAME": "azwarazuhri.guardtour.alsut.msg"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-badge": {
+      "PACKAGE_NAME": "azwarazuhri.guardtour.alsut.msg"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "azwarazuhri.guardtour.alsut.msg"
+    }
+  }
+}

@@ -1,0 +1,64 @@
+page-report {
+    .body {
+        background-color: #cfd1d6;
+        padding: 0;
+    }
+
+    .top-head{
+        height: 60px;
+        background-color: #161e3d;
+        color: #fff;
+        padding:10px;
+        text-align: left;
+    }
+    .top-head span {
+        // padding-top: 15px;
+        font-size: 26px;
+    }
+
+    .btn-back {
+        background-color: #161e3d;
+    }
+
+    h2 {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .inner-box {
+        padding-top: 20px;
+        background-color: #fff;
+        font-size: 30px;
+        display: block;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+        background-color: none;
+    }
+
+    input, textarea {
+        width: 100%;
+        color: #000;
+    }
+
+    textarea {
+        height: 80px;
+    }
+    label {
+        display: inline-block;
+        width: 100%;
+        margin:  6px 0;
+        color: #fff;
+    }
+
+    .btn-submit {
+        color: #fff;
+        width: 280px;
+        background-color: #161e3d;
+        border-radius: 25px;
+        height: 50px;
+        font-size: 26px;
+    }
+}

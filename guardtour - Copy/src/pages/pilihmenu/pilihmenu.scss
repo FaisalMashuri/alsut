@@ -1,0 +1,33 @@
+page-pilihmenu {
+    .body {
+        background-color: #cfd1d6;
+    }
+
+    .top-head{
+        height: 60px;
+        background-color: #161e3d;
+        color: #fff;
+        padding:10px;
+    }
+
+    .btn-pilih {
+        background-color: #fff;
+        border-radius: 0;
+        color : #000;
+        font-size: 16px;
+        // border: 1px #000 solid;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        width: 30%;
+    }
+
+    .button-footer {
+        padding-top: 20px;
+        height: 80px;
+        width: 100%;
+        background-color: #fff;
+        position: absolute; 
+        bottom: 0px; 
+    }
+}

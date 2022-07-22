@@ -1,0 +1,43 @@
+<ion-content text-center class="body">
+    <div class="top-head">
+        <button ion-button (click)="logout()" class="btn-back">
+            <img src="assets/imgs/arrow_back.png" height="40">
+        </button>
+        <span>Patroli</span>
+    </div>
+    <div class="frame-home">
+        <div class="inner-box">
+        	<div class="row">
+            	<ion-item>
+                    <ion-label>Nama</ion-label>
+                    <ion-label>{{ userName }}</ion-label>
+                </ion-item>
+        	</div>
+            <div class="row">
+                <ion-item>
+                    <ion-label>Tanggal</ion-label>
+                    <ion-label>{{ scheduleDate }}</ion-label>
+                </ion-item>
+            </div>
+        	<div class="row">
+                <ion-item>
+                    <ion-label>Cluster</ion-label>
+                    <ion-select [(ngModel)]="cluster" (ngModelChange)="getTrack(cluster)" >
+                        <ion-option *ngFor="let cluster of clusters" [value]="cluster.id">{{cluster.name}}</ion-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Track</ion-label>
+                    <ion-select [(ngModel)]="track" (ngModelChange)="trackChoose(track)">
+                        <ion-option *ngFor="let track of tracks" [value]="track" selected>{{track.name}}</ion-option>
+                    </ion-select>
+                </ion-item>
+            </div>
+            
+        </div>
+        
+        <div class="btn-box">
+            <button ion-button (click)="start()" class="btn-submit start full outline">Start</button>
+        </div>
+    </div>
+</ion-content>

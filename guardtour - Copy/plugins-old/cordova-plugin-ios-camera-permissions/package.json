@@ -1,0 +1,74 @@
+{
+  "_args": [
+    [
+      "cordova-plugin-ios-camera-permissions@1.2.0",
+      "C:\\Users\\faisa\\guardtour"
+    ]
+  ],
+  "_from": "cordova-plugin-ios-camera-permissions@1.2.0",
+  "_id": "cordova-plugin-ios-camera-permissions@1.2.0",
+  "_inBundle": false,
+  "_integrity": "sha1-lGEsfeX9z1m4YwBXtQc5tJCeCsk=",
+  "_location": "/cordova-plugin-ios-camera-permissions",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "cordova-plugin-ios-camera-permissions@1.2.0",
+    "name": "cordova-plugin-ios-camera-permissions",
+    "escapedName": "cordova-plugin-ios-camera-permissions",
+    "rawSpec": "1.2.0",
+    "saveSpec": null,
+    "fetchSpec": "1.2.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-ios-camera-permissions/-/cordova-plugin-ios-camera-permissions-1.2.0.tgz",
+  "_spec": "1.2.0",
+  "_where": "C:\\Users\\faisa\\guardtour",
+  "author": {
+    "name": "Andreas Jacob",
+    "email": "andreas@cordobo.de",
+    "url": "http://cordobo.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/cordobo/cordova-plugin-ios-camera-permissions/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-ios-camera-permissions",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "description": "Cordova / PhoneGap Plugin Permission Settings for NSCameraUsageDescription, NSPhotoLibraryUsageDescription, NSPhotoLibraryAddUsageDescription and NSMicrophoneUsageDescription in iOS 11 by adding a declaration to the Info.plist file",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "homepage": "https://github.com/cordobo/cordova-plugin-ios-camera-permissions#readme",
+  "keywords": [
+    "cordova",
+    "ios",
+    "ios10",
+    "ios11",
+    "app",
+    "security",
+    "permissions",
+    "nscamerausagedescription",
+    "nsphotolibraryaddusagedescription",
+    "nsphotolibraryusagedescription",
+    "nsmicrophoneusagedescription",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-ios-camera-permissions",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cordobo/cordova-plugin-ios-camera-permissions.git"
+  },
+  "version": "1.2.0"
+}

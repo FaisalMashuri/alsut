@@ -1,0 +1,29 @@
+<ion-content>
+    <div class="frame">
+        <header text-center>
+            <h2>Guard Tour</h2>
+        </header>
+        <div class="inner-box">
+        	<div class="form-login">
+        			<div class="row1">
+                        <img class="img" src="assets/imgs/login-username.png" height="40" width="40"> 
+                        <div class="box-input">
+                            <input class="input-box-login" placeholder="nik" [(ngModel)]="userid"> 
+                        </div>
+                    </div>
+        			<div class="row1">
+                        <img class="img" src="assets/imgs/login-password.png" height="40" width="40"> 
+                        <div class="box-input">
+                            <input class="input-box-login" type="password" placeholder="password" [(ngModel)]="password">
+                        </div>
+                    </div>
+                    <div class="btn-login-box">
+                        <button class="btn-login" (click)="submit()">Login</button>
+                    </div>
+        	</div>
+
+        </div>
+
+    </div>
+    
+</ion-content>

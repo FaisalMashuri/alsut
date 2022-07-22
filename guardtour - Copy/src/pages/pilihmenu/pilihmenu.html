@@ -1,0 +1,23 @@
+<ion-content text-center class="body">
+    <div class="top-head">
+      <label>Pilih panic button untuk melaporkan suatu peristiwa, </label>
+      <label>atau Guard Tour untuk berpatroli </label>
+    </div>
+
+    <div class="button-footer">
+        <div text-center>
+            <button class="btn-pilih" ion-button icon-end (click)="panic()">
+                <img class="img" src="assets/imgs/report.png" height="40" width="40"> 
+                <span> Report</span>
+            </button>
+            <button class="btn-pilih" ion-button icon-start (click)="guardtour()">
+                <img class="img" src="assets/imgs/patroli.png" height="40" width="40"> 
+                <span> Patroli</span>
+            </button>
+            <button class="btn-pilih" ion-button icon-start (click)="logout()">
+                <img class="img" src="assets/imgs/logout.png" height="40" width="40"> 
+                <span> Logout</span>
+            </button>
+        </div>
+    </div>
+</ion-content>
