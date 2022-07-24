@@ -39,7 +39,7 @@ export class LoginPage {
     uid: string;
 
     //versi
-    versi:string='1.1.18';
+    versi:string='1.1.9';
     constructor(
       private localNotifications: LocalNotifications, 
       // private ble: BLE, 
@@ -145,7 +145,7 @@ export class LoginPage {
   }
 
   ionViewDidEnter(){
-      
+    
   }
 
   backgroundInit(){
